@@ -59,7 +59,7 @@
                     <!-- Left Side -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">🏠 {{ __('Home') }}</a>
+                            <a class="nav-link text-white" href="{{ route('home') }}">🏠 {{ __('Home') }}</a>
                         </li>
                         @if($user && $user->hasRole('merchant'))
                             <li class="nav-item">
@@ -67,6 +67,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">🛒 {{ __('Invoice') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ route('merchant.profile.edit') }}">📋 {{ __('Preferensi Perusahaan') }}</a>
                             </li>
                         @endif
 
