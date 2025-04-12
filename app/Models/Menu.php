@@ -23,10 +23,8 @@ class Menu extends Model
         'merchant_id',
         'name',
         'description',
+        'photo_path',
         'price',
-        'image',
-        'category',
-        'status',
     ];
 
 
@@ -56,8 +54,5 @@ class Menu extends Model
         return $this->image ? asset('storage/' . $this->image) : null;
     }
 
-    public function getPriceAttribute($value)
-    {
-        return number_format($value, 0, ',', '.');
-    }
+
 }

@@ -19,6 +19,8 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito:400,600,700" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <!-- Styles & Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -63,7 +65,7 @@
                         </li>
                         @if($user && $user->hasRole('merchant'))
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">📋 {{ __('Menu') }}</a>
+                                <a class="nav-link text-white" href="{{ route('merchant.menu.index') }}">📋 {{ __('Menu') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">🛒 {{ __('Invoice') }}</a>

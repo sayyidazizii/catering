@@ -25,13 +25,13 @@ class MenuSeeder extends Seeder
                     'name' => 'Nasi Goreng',
                     'description' => 'Nasi goreng spesial dengan telur dan ayam.',
                     'price' => 25000,
-                    'photo_path' => 'nasi_goreng.jpg',
+                    'photo_path' => 'menus/nasi-goreng.jpg',
                 ],
                 [
                     'name' => 'Sate Ayam',
                     'description' => 'Sate ayam dengan bumbu kacang.',
                     'price' => 30000,
-                    'photo_path' => 'sate_ayam.jpg',
+                    'photo_path' => 'menus/sate-ayam.jpg',
                 ],
             ]);
         }
