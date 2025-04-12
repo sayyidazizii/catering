@@ -71,7 +71,7 @@
                                 <a class="nav-link text-white" href="#">🛒 {{ __('Daftar Order') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('merchant.profile.edit') }}">📋 {{ __('Preferensi Perusahaan') }}</a>
+                                <a class="nav-link text-white" href="{{ route('merchant.profile.edit') }}">📋 {{ __('Profil Merchant') }}</a>
                             </li>
                         @endif
 
