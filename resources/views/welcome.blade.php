@@ -100,7 +100,6 @@
             <h1>Selamat Datang di Sistem Informasi Catering</h1>
             <p>Temukan kemudahan dalam memesan layanan catering.</p>
 
-            <!-- Navigation for login, register, and dashboard -->
             @if (Route::has('login'))
                 <nav class="-mx-3 flex flex-1 justify-end">
                     @auth
