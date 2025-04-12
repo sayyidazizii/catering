@@ -80,7 +80,7 @@
                                 <a class="nav-link text-white" href="#">🛒 {{ __('Order') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">🧾 {{ __('Riwayat Transaksi') }}</a>
+                                <a class="nav-link text-white" href="#">🧾 {{ __('Riwayat Pesanan') }}</a>
                             </li>
                         @endif
 

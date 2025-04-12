@@ -1,3 +1,9 @@
+@php
+    use Illuminate\Support\Facades\Auth;
+
+    $user = Auth::user();
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
@@ -27,6 +33,8 @@
 
         <div class="col-md-6">
 
+            @if($user && $user->hasRole('merchant'))
+
             <div class="card shadow-sm h-100">
                 <div class="card-header bg-success text-white">
                     <strong>⚡ Akses Cepat</strong>
@@ -40,6 +48,25 @@
                     </a>
                 </div>
             </div>
+            @endif
+
+            @if($user && $user->hasRole('customer'))
+
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-warning text-dark">
+                    <strong>🍽️ Menu Utama</strong>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-outline-warning w-100 mb-2">
+                        <i class="bi bi-book me-1"></i>Lihat Menu Catering
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary w-100">
+                        <i class="bi bi-clock-history me-1"></i>Riwayat Pesanan
+                    </a>
+                </div>
+            </div>
+            @endif
+
         </div>
     </div>
 
