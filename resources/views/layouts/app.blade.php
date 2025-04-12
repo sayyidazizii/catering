@@ -68,7 +68,7 @@
                                 <a class="nav-link text-white" href="{{ route('merchant.menu.index') }}">📋 {{ __('Menu') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">🛒 {{ __('Invoice') }}</a>
+                                <a class="nav-link text-white" href="#">🛒 {{ __('Daftar Order') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('merchant.profile.edit') }}">📋 {{ __('Preferensi Perusahaan') }}</a>
