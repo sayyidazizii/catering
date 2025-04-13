@@ -18,7 +18,8 @@ class MerchantSeeder extends Seeder
             'company_name' => 'Merchant Company',
             'address' => '123 Merchant St.',
             'contact' => '+62123456789',
-            'description' => 'Contoh deskripsi Perusahaan Katering.',
+            'location' => 'Semarang',
+            'description' => 'deskripsi Perusahaan Katering.',
         ]);
     }
 }
