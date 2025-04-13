@@ -55,6 +55,21 @@
                             @enderror
                         </div>
 
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Lokasi</label>
+                            <select name="location" class="form-select select2" required>
+                                <option value="">Pilih Lokasi</option>
+                                @foreach(config('location') as $location)
+                                    <option value="{{ $location }}" {{ old('location', $merchant->location ?? '') == $location ? 'selected' : '' }}>
+                                        {{ $location }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('location')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
                         <div class="d-flex justify-content-end">
                             <button type="submit" class="btn btn-primary">
                                 Simpan Perubahan

@@ -9,6 +9,10 @@
 @section('content')
 <div class="container py-4">
     <h3 class="mb-4">👋 Selamat datang, {{ Auth::user()->name }}!</h3>
+        @if($user && $user->hasRole('merchant'))
+            <h5 class="mb-4">📍Lokasi: {{ $user->merchant->location }}, {{ Auth::user()->name }}!</h5>
+        @endif
+
 
     @if (session('status'))
         <div class="alert alert-success">{{ session('status') }}</div>

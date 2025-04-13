@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Menu;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Model;
 
 class OrderItem extends Model
@@ -29,4 +31,14 @@ class OrderItem extends Model
         'updated_at',
         'deleted_at',
     ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
 }

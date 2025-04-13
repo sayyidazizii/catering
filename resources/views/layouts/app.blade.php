@@ -22,6 +22,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+     <!-- Add Select2 CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+     <!-- Add jQuery (required for Select2) -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <!-- Add Select2 JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
     <!-- Styles & Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -69,7 +78,7 @@
                                 <a class="nav-link text-white" href="{{ route('merchant.menu.index') }}">📋 {{ __('Menu') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">🛒 {{ __('Daftar Order') }}</a>
+                                <a class="nav-link text-white" href="{{ route('merchant.orders.list') }}">🛒 {{ __('Daftar Order') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('merchant.profile.edit') }}">📋 {{ __('Profil Merchant') }}</a>
@@ -78,11 +87,12 @@
 
                         @if($user && $user->hasRole('customer'))
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">🛒 {{ __('Order') }}</a>
+                                <a class="nav-link text-white" href="{{ route('customer.order.create') }}">🛒 {{ __('Order') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">🧾 {{ __('Riwayat Pesanan') }}</a>
+                                <a class="nav-link text-white" href="{{ route('customer.order.history') }}">🧾 {{ __('Riwayat Pesanan') }}</a>
                             </li>
+                            
                         @endif
 
                     </ul>
@@ -128,5 +138,14 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Pilih Lokasi",
+                allowClear: true
+            });
+        });
+    </script>
+
 </body>
 </html>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Merchant;
+use App\Models\OrderItem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -54,5 +55,9 @@ class Menu extends Model
         return $this->image ? asset('storage/' . $this->image) : null;
     }
 
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 
 }

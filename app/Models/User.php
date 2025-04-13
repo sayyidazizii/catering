@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 // use App\Models\Menu;
+use App\Models\Order;
 use App\Models\Merchant;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
@@ -53,5 +54,10 @@ class User extends Authenticatable
     public function merchant()
     {
         return $this->hasOne(Merchant::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
