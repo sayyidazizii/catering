@@ -1,3 +1,113 @@
+Sistem Informasi Catering
+Sistem Informasi Catering adalah aplikasi berbasis web untuk memesan layanan catering. Aplikasi ini dibangun menggunakan Laravel untuk backend dan Vue.js/ React (tergantung pengaturan frontend) untuk frontend.
+
+Prasyarat
+Sebelum memulai, pastikan Anda sudah menginstal beberapa perangkat lunak berikut:
+
+PHP (versi 8.0 atau lebih tinggi)
+
+Composer untuk mengelola dependensi PHP
+
+Node.js dan npm (untuk mengelola dependensi frontend dan build)
+
+MySQL atau MariaDB untuk database
+
+Langkah-langkah Instalasi
+1. Clone Repository
+Pertama, clone repositori ke mesin lokal Anda:
+
+bash
+Salin
+Edit
+git clone https://github.com/sayyidazizii/catering.git
+2. Masuk ke Direktori Proyek
+Setelah repositori berhasil di-clone, masuk ke direktori proyek:
+
+bash
+Salin
+Edit
+cd catering
+3. Instal Dependensi PHP
+Jalankan perintah berikut untuk menginstal dependensi PHP menggunakan Composer:
+
+bash
+Salin
+Edit
+composer install
+4. Salin .env dan Konfigurasi Environment
+Salin file .env.example menjadi .env dan sesuaikan pengaturan seperti koneksi database sesuai dengan lingkungan lokal Anda:
+
+bash
+Salin
+Edit
+cp .env.example .env
+Buka file .env dan sesuaikan pengaturan seperti berikut:
+
+DB_DATABASE = nama database Anda
+
+DB_USERNAME = nama pengguna database
+
+DB_PASSWORD = kata sandi pengguna database
+
+Pastikan juga pengaturan lainnya sesuai dengan server dan konfigurasi lokal Anda.
+
+5. Generate Key Aplikasi
+Jalankan perintah berikut untuk menghasilkan APP_KEY yang diperlukan untuk aplikasi Laravel:
+
+bash
+Salin
+Edit
+php artisan key:generate
+6. Migrasi dan Seed Database
+Jalankan migrasi dan seeding untuk membuat tabel dan mengisi data awal ke dalam database:
+
+bash
+Salin
+Edit
+php artisan migrate --seed
+Ini akan membuat semua tabel yang diperlukan di database dan mengisi data awal (seperti role dan user admin).
+
+7. Instal Dependensi Frontend
+Setelah menginstal dependensi PHP, kita perlu menginstal dependensi frontend menggunakan npm. Jalankan perintah berikut untuk menginstal paket npm:
+
+bash
+Salin
+Edit
+npm install
+8. Jalankan Build Frontend
+Jalankan perintah berikut untuk memulai proses build frontend dan menjalankan server pengembangan:
+
+bash
+Salin
+Edit
+npm run dev
+9. Jalankan Aplikasi
+Sekarang, jalankan server Laravel dengan perintah berikut:
+
+bash
+Salin
+Edit
+php artisan serve
+Aplikasi akan berjalan di http://localhost:8000.
+
+10. Akses Aplikasi
+Buka browser dan buka http://localhost:8000 untuk melihat aplikasi berjalan.
+
+11. Login dan Mulai Penggunaan
+Setelah berhasil menjalankan aplikasi, Anda bisa login dengan menggunakan akun yang telah terdaftar melalui halaman login yang tersedia.
+
+merchant:
+email    : merchant@gmail.com
+pass     : 12345678
+
+
+customer:
+email    : customer@gmail.com
+pass     : 12345678
+
+<br>
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
