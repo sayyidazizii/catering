@@ -1,5 +1,5 @@
 Sistem Informasi Catering
-Sistem Informasi Catering adalah aplikasi berbasis web untuk memesan layanan catering. Aplikasi ini dibangun menggunakan Laravel untuk backend dan Vue.js/ React (tergantung pengaturan frontend) untuk frontend.
+Sistem Informasi Catering adalah aplikasi berbasis web untuk memesan layanan catering. Aplikasi ini dibangun menggunakan Laravel untuk backend dan Vue.js atau React (tergantung konfigurasi frontend) untuk antarmuka pengguna.
 
 Prasyarat
 Sebelum memulai, pastikan Anda sudah menginstal beberapa perangkat lunak berikut:
@@ -8,13 +8,13 @@ PHP (versi 8.0 atau lebih tinggi)
 
 Composer untuk mengelola dependensi PHP
 
-Node.js dan npm (untuk mengelola dependensi frontend dan build)
+Node.js dan npm untuk mengelola dependensi frontend dan build
 
 MySQL atau MariaDB untuk database
 
 Langkah-langkah Instalasi
 1. Clone Repository
-Pertama, clone repositori ke mesin lokal Anda:
+Clone repositori ini ke mesin lokal Anda:
 
 bash
 Salin
@@ -34,14 +34,14 @@ bash
 Salin
 Edit
 composer install
-4. Salin .env dan Konfigurasi Environment
+4. Salin File .env dan Konfigurasi Environment
 Salin file .env.example menjadi .env dan sesuaikan pengaturan seperti koneksi database sesuai dengan lingkungan lokal Anda:
 
 bash
 Salin
 Edit
 cp .env.example .env
-Buka file .env dan sesuaikan pengaturan seperti berikut:
+Buka file .env dan sesuaikan pengaturan berikut:
 
 DB_DATABASE = nama database Anda
 
@@ -59,16 +59,16 @@ Salin
 Edit
 php artisan key:generate
 6. Migrasi dan Seed Database
-Jalankan migrasi dan seeding untuk membuat tabel dan mengisi data awal ke dalam database:
+Jalankan perintah berikut untuk migrasi database dan seeding data awal (seperti role dan user admin):
 
 bash
 Salin
 Edit
 php artisan migrate --seed
-Ini akan membuat semua tabel yang diperlukan di database dan mengisi data awal (seperti role dan user admin).
+Ini akan membuat semua tabel yang diperlukan di database dan mengisi data awal.
 
 7. Instal Dependensi Frontend
-Setelah menginstal dependensi PHP, kita perlu menginstal dependensi frontend menggunakan npm. Jalankan perintah berikut untuk menginstal paket npm:
+Setelah menginstal dependensi PHP, kita perlu menginstal dependensi frontend menggunakan npm. Jalankan perintah berikut:
 
 bash
 Salin
@@ -94,44 +94,17 @@ Aplikasi akan berjalan di http://localhost:8000.
 Buka browser dan buka http://localhost:8000 untuk melihat aplikasi berjalan.
 
 11. Login dan Mulai Penggunaan
-Setelah berhasil menjalankan aplikasi, Anda bisa login dengan menggunakan akun yang telah terdaftar melalui halaman login yang tersedia.
+Setelah berhasil menjalankan aplikasi, Anda dapat login menggunakan akun yang telah terdaftar.
 
-merchant:
-email    : merchant@gmail.com
-pass     : 12345678
+Merchant (contoh akun):
+Email: merchant@gmail.com
 
+Password: 12345678
 
-customer:
-email    : customer@gmail.com
-pass     : 12345678
+Customer (contoh akun):
+Email: customer@gmail.com
 
-<br>
-
-
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
+Password: 12345678
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
