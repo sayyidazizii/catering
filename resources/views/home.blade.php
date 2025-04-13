@@ -61,10 +61,10 @@
                     <strong>🍽️ Menu Utama</strong>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="btn btn-outline-warning w-100 mb-2">
+                    <a href="{{ route('customer.order.create') }}" class="btn btn-outline-warning w-100 mb-2">
                         <i class="bi bi-book me-1"></i>Lihat Menu Catering
                     </a>
-                    <a href="#" class="btn btn-outline-secondary w-100">
+                    <a href="{{ route('customer.order.history') }}" class="btn btn-outline-secondary w-100">
                         <i class="bi bi-clock-history me-1"></i>Riwayat Pesanan
                     </a>
                 </div>
