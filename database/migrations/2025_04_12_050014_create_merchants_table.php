@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('company_name')->nullable();
             $table->string('address')->nullable();
             $table->string('contact')->nullable();
-            $table->string('location')->nullable();
+            $table->string('location')->nullable()->default('Semarang');
             $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();

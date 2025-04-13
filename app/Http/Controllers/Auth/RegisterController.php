@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Models\Merchant;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -64,6 +65,15 @@ class RegisterController extends Controller
         ]);
 
         $user->assignRole('merchant');
+
+        Merchant::create([
+            'user_id' => $user->id,
+            'company_name' => 'Nama Perusahaan Belum Diisi',
+            'address' => 'Alamat belum diisi',
+            'contact' => '081234567890',
+            'location' => 'Semarang',
+            'description' => 'Edit Deskripsi ini.',
+        ]);
 
         return redirect($this->redirectTo);
     }
