@@ -5,10 +5,17 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\MerchantController;
+use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/register-customer', [RegisterController::class, 'showCustomerRegisterForm'])->name('register.customer.form');
+Route::post('/register-customer', [RegisterController::class, 'registerCustomer'])->name('register.customer');
+
+Route::get('/register-merchant', [RegisterController::class, 'showMerchantRegisterForm'])->name('register.merchant.form');
+Route::post('/register-merchant', [RegisterController::class, 'registerMerchant'])->name('register.merchant');
 
 Auth::routes();
 

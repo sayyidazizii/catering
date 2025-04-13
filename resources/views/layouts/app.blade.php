@@ -103,9 +103,9 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('login') }}">🔐 {{ __('Login') }}</a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('register') }}">📝 {{ __('Register') }}</a>
-                            </li>
+                            </li> --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-white" href="#" role="button"

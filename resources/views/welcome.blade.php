@@ -122,9 +122,16 @@
             @endif
 
             <div class="button-container">
-                <a href="/login" class="button"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="/register-customer" class="button button-secondary"><i class="fas fa-user"></i> Register sebagai Customer</a>
-                <a href="/register-merchant" class="button button-secondary"><i class="fas fa-store"></i> Register sebagai Merchant</a>
+                <div class="button-container">
+                    @auth
+                        <a href="/home" class="button"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    @else
+                        <a href="/login" class="button"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="/register-customer" class="button button-secondary"><i class="fas fa-user"></i> Register sebagai Customer</a>
+                        <a href="/register-merchant" class="button button-secondary"><i class="fas fa-store"></i> Register sebagai Merchant</a>
+                    @endauth
+                </div>
+                
             </div>
         </div>
     </div>
